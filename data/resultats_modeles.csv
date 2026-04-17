@@ -1,0 +1,4 @@
+nom,accuracy,f1,precision,recall,cv_f1_mean,cv_f1_std
+Foret Aleatoire,0.7659,0.7663,0.7671,0.7659,0.8237,0.0025
+SVM (LinearSVC),0.5319,0.5297,0.622,0.5319,0.6004,0.0023
+Gradient Boosting,0.685,0.6871,0.6959,0.685,0.7575,0.0023
