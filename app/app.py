@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(
     page_title="Credit Score Predictor",
-    page_icon="💳",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
@@ -198,7 +197,7 @@ def vote_card(score):
 # -----------------------------------------------
 # INTERFACE
 # -----------------------------------------------
-st.markdown('<div class="main-title">💳 Credit Score Predictor</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-title">Credit Score Predictor</div>', unsafe_allow_html=True)
 st.markdown(
     '<div class="main-subtitle">8INF436 &nbsp;·&nbsp; Forage de données &nbsp;·&nbsp; '
     'Frantxa Cabrejos &nbsp;·&nbsp; Loup-Djabril Le Bivic &nbsp;·&nbsp; Nathan Razafindratsima</div>',
@@ -214,7 +213,7 @@ except Exception as e:
     ok = False
 
 if ok:
-    tab1, tab2, tab3 = st.tabs(["✏️  Saisie manuelle", "📂  Import CSV", "📊  Métriques"])
+    tab1, tab2, tab3 = st.tabs(["Saisie manuelle", "Import CSV", "Métriques"])
 
     # ---- Onglet 1 : saisie manuelle ----
     with tab1:
@@ -240,7 +239,7 @@ if ok:
             credit_util      = st.slider("Taux utilisation crédit (%)", 0.0, 100.0, 30.0)
 
         st.markdown("")
-        if st.button("🔮  Prédire le score de crédit", type="primary"):
+        if st.button("Prédire le score de crédit", type="primary"):
             data = {col: np.nan for col in obj['feature_cols']}
             data.update({
                 'Age': age, 'Occupation': occupation,
@@ -272,7 +271,7 @@ if ok:
             st.caption(f"{df_up.shape[0]} lignes · {df_up.shape[1]} colonnes")
             st.dataframe(df_up.head(5), use_container_width=True)
 
-            if st.button("🔮  Prédire pour tous les clients", type="primary"):
+            if st.button("Prédire pour tous les clients", type="primary"):
                 with st.spinner("Prédiction en cours..."):
                     preds = predire(preprocess_input(df_up, obj), obj)
 
