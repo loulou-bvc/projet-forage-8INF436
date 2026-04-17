@@ -14,7 +14,9 @@
       "Bash(python -c \"import json; nb=json.load\\(open\\('notebooks/projetFinal.ipynb',encoding='utf-8'\\)\\); [print\\(i, c.get\\('id','?'\\), c['cell_type'], \\(c['source'][0] if c['source'] else ''\\)[:80]\\) for i,c in enumerate\\(nb['cells']\\)]\")",
       "Bash(python _insert_section6.py)",
       "Bash(python)",
-      "Bash(pip install:*)"
+      "Bash(pip install:*)",
+      "Bash(pip show:*)",
+      "Bash(rm _insert_section7.py)"
     ]
   }
 }
