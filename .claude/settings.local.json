@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c ':*)",
+      "Bash(python -c \"import pandas, sklearn, numpy; print\\('pandas', pandas.__version__\\); print\\('sklearn', sklearn.__version__\\)\")",
+      "Bash(python -m pip install --quiet pandas numpy scikit-learn)",
+      "Bash(python -c \"import pandas, sklearn, numpy; print\\('OK'\\)\")",
+      "Bash(python -m pip install --quiet nbconvert ipykernel jupyter)",
+      "Bash(python -m jupyter nbconvert --to notebook --execute --inplace projetFinal.ipynb)",
+      "Bash(python -m jupyter nbconvert --to notebook --execute --inplace notebooks/projetFinal.ipynb)"
+    ]
+  }
+}
